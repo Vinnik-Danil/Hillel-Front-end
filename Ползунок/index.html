@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Range</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="slider">
+		<output for="fader" id="volume">0</output>
+		<input type="range" id="fader" min="0" max="900" value="0" step="1" oninput="outputUpdate(value)">
+		<!-- <output for="volume" id="sum">  </output> -->
+	</div>
+
+	<script type="text/javascript">
+		function outputUpdate(vol) {
+			var output = document.querySelector('#volume');
+			var output1 = document.querySelector('#sum');
+			output.value = vol;
+			// output.style.left = vol - 20 + 'px';
+		// 	if(output.value > 9) {
+		// 		output.style.left = vol - 30 + 'px';
+		// 	}
+		// 	if(output.value > 99) {
+		// 		output.style.left = vol - 40 + 'px';
+		// 	}
+		// 	if(output.value > 240) {
+		// 		output.style.left = vol - 45 + 'px';
+		// 	}
+		// 	if(output.value > 430) {
+		// 		output.style.left = vol - 50 + 'px';
+		// 	}
+		// 	if(output.value > 470) {
+		// 		output.style.left = vol - 55 + 'px';
+		// 	}
+		// 	if(output.value > 510) {
+		// 		output.style.left = vol - 60 + 'px';
+		// 	}
+		// 	if(output.value > 590) {
+		// 		output.style.left = vol - 70 + 'px';
+		// 	}
+		// 	if(output.value > 670) {
+		// 		output.style.left = vol - 80 + 'px';
+		// 	}
+		// 	if(output.value > 750) {
+		// 		output.style.left = vol - 90 + 'px';
+		// 	}
+		// 	if(output.value > 830) {
+		// 		output.style.left = vol - 100 + 'px';
+		// 	}
+		// 	if(output.value > 920) {
+		// 		output.style.left = vol - 110 + 'px';
+		// 	}
+		// 	if(output.value > 1000) {
+		// 		output.style.left = vol - 140 + 'px';
+		// 	}
+		// 	if(output.value > 920) {
+		// 		output.style.left = vol - 110 + 'px';
+		// 	}
+		// 	if(output.value > 920) {
+		// 		output.style.left = vol - 110 + 'px';
+		// 	}
+		}
+	</script>
+
+</body>
+</html>
