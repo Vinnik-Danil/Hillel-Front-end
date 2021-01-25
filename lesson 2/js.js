@@ -6,15 +6,15 @@ number2 = Number(number2);
 
 let function_type = prompt("Выберете тип операции \n+ \n-\n* \n/");
     if(function_type=='+'){
-        alert(number1 + "+" + number2+ "=" + Number(number1+number2));
+        alert(number1 + "+" + number2+ "=" + (number1+number2));
         console.log(number1+number2);
     }
     if(function_type=='-'){
-        alert(number1 + "-" + number2 + "=" + Number(number1-number2));
+        alert(number1 + "-" + number2 + "=" + (number1-number2));
         console.log(number1-number2);
     }
     if(function_type=='*'){
-        alert(number1 + "*" + number2+ "=" + Number(number1*number2));
+        alert(number1 + "*" + number2+ "=" + (number1*number2));
         console.log(number1*number2);
     }
     if(function_type=='/'){
@@ -23,7 +23,7 @@ let function_type = prompt("Выберете тип операции \n+ \n-\n* 
             
         }
         console.log(number1/number2);
-        alert(number1 + "/" + number2+ "=" + Number(number1/number2));
+        alert(number1 + "/" + number2+ "=" + (number1/number2));
     }
     
 
