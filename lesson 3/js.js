@@ -4,16 +4,16 @@ number1 = Number(number1);
 let number2 = prompt("Введите число 2");
 number2 = Number(number2);
 let result;
-    const add = function ($number1, $number2){
+    const add = function (){
         return number1 + number2;   
     }
-    const diff = function ($number1, $number2){
+    const diff = function (){
         return number1 - number2;   
     }
-    const mult = function ($number1, $number2){
+    const mult = function (){
         return number1 * number2;   
     }
-    const div = function ($number1, $number2){
+    const div = function (){
         return number1 / number2;   
     }
     result =`Result operation
