@@ -21,28 +21,28 @@ number2 = Number(number2);
 //     }
 //   }
 
+const add = function (a, b){
+    return a+b;
+}
+const diff = function (a, b){
+    return a-b;  
+}
+const mult = function (a, b){
+    return a*b;
+}
+const div = function (a, b){
+    return a/b;
+}
 let result;
-    const add = function (a, b){
-        return a+b;
-    }
-    const diff = function (a, b){
-        return a-b;  
-    }
-    const mult = function (a, b){
-        return a*b;
-    }
-    const div = function (a, b){
-        return a/b;
-    }
 
 
-    result =`Result operation
-    Operation[+]: ${number1} + ${number2} = ${add(number1, number2)} 
-    Operation[-]: ${number1} - ${number2} = ${diff(number1, number2)} 
-    Operation[*]: ${number1} * ${number2} = ${mult(number1, number2)} 
-    Operation[/]: ${number1} / ${number2} = ${div(number1, number2)} 
-    `
-    alert(result);
-    console.log(result);
+result =`Result operation
+Operation[+]: ${number1} + ${number2} = ${add(number1, number2)} 
+Operation[-]: ${number1} - ${number2} = ${diff(number1, number2)} 
+Operation[*]: ${number1} * ${number2} = ${mult(number1, number2)} 
+Operation[/]: ${number1} / ${number2} = ${div(number1, number2)} 
+`
+alert(result);
+console.log(result);
     
 
