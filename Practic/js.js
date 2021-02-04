@@ -4,6 +4,7 @@ let prior_sum = false;
 let prior_div  = false;
 let prior_mult = false;
 let prior_diff = false;
+let prior_proc= false;
 
 
 
@@ -41,13 +42,33 @@ function decimal() {
     document.getElementById('result').value += '.';
 }
 function AC() {
+    prior_sum = false;
+    prior_div  = false;
+    prior_mult = false;
+    prior_diff = false;
+    prior_proc= false;
     document.getElementById('result').value = '';
+}
+function minus() {
+    let a;
+    let b;
+    a = document.getElementById('result').value;
+    b = a - (a*2);
+    document.getElementById('result').value = b;
+}
+function proc() {
+    prior_proc = true;
+    leftside = document.getElementById('result').value;
+    leftside = Number(leftside);
+    console.log(leftside);
+    document.getElementById('result').value ='';
 }
 function sum() {
     prior_sum = true;
     prior_div = false;  
     prior_mult= false;
     prior_diff= false;
+    prior_proc= false;
     leftside = document.getElementById('result').value;
     leftside = Number(leftside);
     console.log(leftside);
@@ -58,6 +79,7 @@ function div() {
     prior_div = true;  
     prior_mult= false;
     prior_diff= false;
+    prior_proc= false;
     leftside = document.getElementById('result').value;
     leftside = Number(leftside);
     console.log(leftside);
@@ -68,6 +90,7 @@ function mult() {
     prior_div = false;  
     prior_mult= true;
     prior_diff= false;
+    prior_proc= false;
     leftside = document.getElementById('result').value;
     leftside = Number(leftside);
     console.log(leftside);
@@ -78,6 +101,7 @@ function diff() {
     prior_div = false;  
     prior_mult= false;
     prior_diff= true;
+    prior_proc= false;
     leftside = document.getElementById('result').value;
     leftside = Number(leftside);
     console.log(leftside);
@@ -98,5 +122,8 @@ function eq() {
     }
     if (prior_diff == true){
         document.getElementById('result').value = leftside / rightside;
+    }
+    if(prior_proc == true){
+        document.getElementById('result').value = (leftside / 100 * rightside) + leftside;
     }
 }
