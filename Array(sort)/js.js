@@ -14,7 +14,7 @@ while(arr.length<4 || result){
     arr[i] = number;
     i++;
     if (!isFinite(number)){
-        alert("Вы ввели не число");
+        alert("Вы ввели не число повторите операцию");
         i--;
     }
     console.log(arr.toString());  
