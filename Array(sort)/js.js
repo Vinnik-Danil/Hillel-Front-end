@@ -42,3 +42,5 @@ if(operation == 1){
 }
 
 alert("Отсортированый массив \n" + arr.toString());
+
+let str
