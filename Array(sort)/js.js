@@ -5,6 +5,7 @@ let i=0;
 number = Number(number);
 let result = true;
 
+function sort(choose) {
 while(arr.length<4 || result){
     number = prompt("Введите число ");
     if(number==null || number==''){
@@ -20,7 +21,6 @@ while(arr.length<4 || result){
     console.log(arr.toString());  
 }
 alert("Введенный массив \n" + arr.toString());
-let operation = prompt("1-По возрастанию\n2-По убыванию\n");
 if(operation == 1){
     for (i=0; i<arr.length; i++){
         for (j=0; j<arr.length; j++){
@@ -42,5 +42,8 @@ if(operation == 1){
 }
 
 alert("Отсортированый массив \n" + arr.toString());
+}
 
-let str
+let operation = prompt("1-По возрастанию\n2-По убыванию\n");
+
+sort(operation);
