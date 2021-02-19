@@ -1,69 +1,93 @@
 let arr = new Array();
 let arrSort = new Array();
-let number;
+let number, operation;
 number = Number(number);
+let arrayOfStrings; //массив без символов
 
-function sort(choose) {
-let result = true;
-let i=0;
-let index;
-while(arr.length<4 || result){
-    number = prompt("Введите число ");
-    if(number==null || number==''){
-        result = false;
+function sort(choose,arr) {
+    let result = true;
+    let index;
+    if(operation == 1){
+        for (i=0; i<arr.length; i++){
+            for (j=0; j<arr.length; j++){
+                if (arr[i]<arr[j]){
+                    index = arr[i];
+                    arr [i]= arr [j];
+                    arr [j]= index;} 
+            }
+        }   
+    }else{
+        for (i=0; i<arr.length; i++){
+            for (j=0; j<arr.length; j++){
+                if (arr[i]>arr[j]){
+                    index = arr[i];
+                    arr [i]= arr [j];
+                    arr [j]= index;} 
+            }
+        }
+    }
+
+    alert("Отсортированый массив \n" + arr.toString());
+}
+function splitString(stringToSplit) {
+    let separator = ',';
+    arrayOfStrings = stringToSplit.split(separator);
+    // console.log(arrayOfStrings);
+    // alert(arrayOfStrings.toString());
+}
+function multiple(arr) {
+    let sortmultip=new Array();
+    let j=0;
+    for (i=0; i<arr.length; i++){
+        if(arr[i]%3 ==0){
+            sortmultip[j]=+arr[i];
+            j++;
+        }
+    }
+    alert(sortmultip.toString());
+}
+function max(array) {
+    
+    let element = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]>element){
+            element = array[i];
+        }
+    }
+    alert(element);
+}
+function min(array) {
+    
+    let element = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]<element){
+            element = array[i];
+        }
+    }
+    alert(element);
+}
+let inputString = prompt("Введите число через запятую");
+let menu = prompt("Выберете операцию\n1-Отсортировать строку\n2-Вывести числа крaтные 3\n3-Склеить все числа с делителем\n4-Вывести максимальное чисто\n5-Вывести минимальное число");
+
+switch (menu) {
+    case "1":
+        splitString(inputString);
+        operation = prompt("1-По возрастанию\n2-По убыванию");
+        sort(operation, arrayOfStrings);
         break;
-    }
-    arr[i] = number;
-    i++;
-    if (!isFinite(number)){
-        alert("Вы ввели не число повторите операцию");
-        i--;
-    }
-    console.log(arr.toString());  
-}
-alert("Введенный массив \n" + arr.toString());
-if(operation == 1){
-    for (i=0; i<arr.length; i++){
-        for (j=0; j<arr.length; j++){
-            if (arr[i]<arr[j]){
-                index = arr[i];
-                arr [i]= arr [j];
-                arr [j]= index;} 
-        }
-    }   
-}else{
-    for (i=0; i<arr.length; i++){
-        for (j=0; j<arr.length; j++){
-            if (arr[i]>arr[j]){
-                index = arr[i];
-                arr [i]= arr [j];
-                arr [j]= index;} 
-        }
-    }
-}
+    case "2":
+        splitString(inputString);
+        multiple(arrayOfStrings);
+        break;
+    case"3":
 
-alert("Отсортированый массив \n" + arr.toString());
-}
-
-// let operation = prompt("1-По возрастанию\n2-По убыванию\n");
-// sort(operation);
-
-let inputString;
-inputString = prompt("Введите число через запятую");
-let sortString;
-function sortStr() {
-
-    for (let index = 0; index < inputString.length; index++) {
-        if(inputString[index]!==','){
-            arr[index] = inputString[index];
-        }else{
-            // index--;
-            
-        }
-        console.log(arr[index]);
-
-        
-    }
-    alert(arr.toString());
-}
-sortStr();  
+        break;
+    case"4":
+        splitString(inputString);
+        max(arrayOfStrings);
+        break;
+    case"5":
+        splitString(inputString);
+        min(arrayOfStrings);
+        break;
+}  

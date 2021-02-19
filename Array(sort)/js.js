@@ -10,7 +10,7 @@ let index;
 while(arr.length<4 || result){
     number = prompt("Введите число ");
     if(number==null || number==''){
-        result = false;
+        result= false;
         break;
     }
     arr[i] = number;
