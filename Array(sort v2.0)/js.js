@@ -1,11 +1,11 @@
 let arr = new Array();
-let arrSort =new Array();
+let arrSort = new Array();
 let number;
-let i=0;
 number = Number(number);
 
 function sort(choose) {
 let result = true;
+let i=0;
 let index;
 while(arr.length<4 || result){
     number = prompt("Введите число ");
@@ -45,6 +45,25 @@ if(operation == 1){
 alert("Отсортированый массив \n" + arr.toString());
 }
 
-let operation = prompt("1-По возрастанию\n2-По убыванию\n");
+// let operation = prompt("1-По возрастанию\n2-По убыванию\n");
+// sort(operation);
 
-sort(operation);
+let inputString;
+inputString = prompt("Введите число через запятую");
+let sortString;
+function sortStr() {
+
+    for (let index = 0; index < inputString.length; index++) {
+        if(inputString[index]!==','){
+            arr[index] = inputString[index];
+        }else{
+            // index--;
+            
+        }
+        console.log(arr[index]);
+
+        
+    }
+    alert(arr.toString());
+}
+sortStr();  
