@@ -27,12 +27,12 @@ function sort(choose, arr) {
     }
 
     alert("Отсортированый массив \n" + arr.toString());
+    return arr; 
 }
 function splitString(stringToSplit) {
     let separator = ',';
     arrayOfStrings = stringToSplit.split(separator);
-    // console.log(arrayOfStrings);
-    // alert(arrayOfStrings.toString());
+    return arrayOfStrings;
 }
 function multiple(arr) {
     let sortmultip = new Array();
@@ -44,6 +44,7 @@ function multiple(arr) {
         }
     }
     alert(sortmultip.toString());
+    return sortmultip;
 }
 function max(array) {
 
@@ -54,6 +55,7 @@ function max(array) {
         }
     }
     alert(element);
+    return element;
 }
 function min(array) {
 
@@ -64,11 +66,13 @@ function min(array) {
         }
     }
     alert(element);
+    return element;
 }
 function joinString(arr, delimeter) {
     let result;
     result = arr.join(delimeter);
     alert(result);
+    return result;
 }
 
 
@@ -84,7 +88,7 @@ function funcQuestion() {
             }
     a = prompt("Хотите использовать эту строку или ввести ноую?\n1-Ввести новую;\n2-Использовать введённую раньше;");
 }
-while (again == true) {
+while (again) {
     let inputString;
     if (a==1) {
         inputString = prompt("Введите число через запятую");

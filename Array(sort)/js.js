@@ -1,7 +1,6 @@
-let arr = new Array();
-let arrSort = new Array();
 
 function sort(choose) {
+    let arr = new Array();
     let number;
     number = Number(number);
     let i = 0;
@@ -46,7 +45,6 @@ function sort(choose) {
 
     alert("Отсортированый массив \n" + arr.toString());
 }
-
 let operation = prompt("1-По возрастанию\n2-По убыванию\n");
 
 sort(operation);
