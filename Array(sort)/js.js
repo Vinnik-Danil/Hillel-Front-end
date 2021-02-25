@@ -1,11 +1,11 @@
-
-function sort(choose) {
+const operation = prompt("1-По возрастанию\n2-По убыванию\n");
+sort(operation);
+function sort() {
     let arr = new Array();
     let number;
     number = Number(number);
     let i = 0;
     let result = true;
-    let index;
     while (arr.length < 4 || result) {
         number = prompt("Введите число ");
         if (number == null || number == '') {
@@ -22,6 +22,7 @@ function sort(choose) {
     }
     alert("Введенный массив \n" + arr.toString());
     if (operation == 1) {
+        let index;
         for (i = 0; i < arr.length; i++) {
             for (j = 0; j < arr.length; j++) {
                 if (arr[i] < arr[j]) {
@@ -45,6 +46,3 @@ function sort(choose) {
 
     alert("Отсортированый массив \n" + arr.toString());
 }
-let operation = prompt("1-По возрастанию\n2-По убыванию\n");
-
-sort(operation);
