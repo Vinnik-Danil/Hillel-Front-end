@@ -27,7 +27,7 @@ function sort(choose, arr) {
     }
 
     alert("Отсортированый массив \n" + arr.toString());
-    return arr; 
+    return arr,funcQuestion(); 
 }
 function splitString(stringToSplit) {
     let separator = ',';
@@ -44,7 +44,7 @@ function multiple(arr) {
         }
     }
     alert(sortmultip.toString());
-    return sortmultip;
+    return sortmultip,funcQuestion();
 }
 function max(array) {
 
@@ -55,7 +55,7 @@ function max(array) {
         }
     }
     alert(element);
-    return element;
+    return element,funcQuestion();
 }
 function min(array) {
 
@@ -66,13 +66,13 @@ function min(array) {
         }
     }
     alert(element);
-    return element;
+    return element,funcQuestion();
 }
 function joinString(arr, delimeter) {
     let result;
     result = arr.join(delimeter);
     alert(result);
-    return result;
+    return result,funcQuestion();
 }
 
 
@@ -94,33 +94,24 @@ while (again) {
         inputString = prompt("Введите число через запятую");
     }
     let menu = prompt("Выберете операцию\n1-Отсортировать строку\n2-Вывести числа крaтные 3\n3-Склеить все числа с делителем\n4-Вывести максимальное чисто\n5-Вывести минимальное число");
+    splitString(inputString);
     switch (menu) {
         case "1":
-            splitString(inputString);
             operation = prompt("1-По возрастанию\n2-По убыванию");
             sort(operation, arrayOfStrings);
-            funcQuestion();
             break;
         case "2":
-            splitString(inputString);
             multiple(arrayOfStrings);
-            funcQuestion();
             break;
         case "3":
-            splitString(inputString);
             operation = prompt("Введите разделитель");
             joinString(arrayOfStrings, operation);
-            funcQuestion();
             break;
         case "4":
-            splitString(inputString);
             max(arrayOfStrings);
-            funcQuestion();
             break;
         case "5":
-            splitString(inputString);
             min(arrayOfStrings);
-            funcQuestion();
             break;
     }
 }
