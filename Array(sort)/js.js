@@ -46,3 +46,4 @@ function sort() {
 
     alert("Отсортированый массив \n" + arr.toString());
 }
+console.log(number);
