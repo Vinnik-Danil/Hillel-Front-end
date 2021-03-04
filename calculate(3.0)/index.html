@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,25 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculate(3.0)</title>
 </head>
+
 <body>
     <h3>Calculate 3.0</h3>
-    <form >
-        <input type="number" id="operand_1" value>
-        <div class="wrap">
-            <select id="selector">
+<div>
+    <input type="number" id="operand_1">
+    <div class="wrap">
+        <select id="selector">
             <option value="sum" selected>+</option>
             <option value="diff">-</option>
             <option value="mult">*</option>
             <option value="div">/</option>
-          </select></div>
-        <input type="number" id="operand_2" value >
-        <button id="submit" type="submit" onclick="main()">Calculate</button>
-        <textarea name="history" id="history" cols="30" rows="10" readonly></textarea>
-    </form>
+        </select>
+    </div>
+    <input type="text" id="operand_2">
+    <!-- <button id="submit" type="submit" onclick="main()">Calculate</button> -->
+    <input type="submit" onclick="main()">
+    <textarea name="history" id="history" cols="30" rows="10" readonly></textarea>
+</div>
     <script src="js.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,11 @@
 h3{
     text-align: center;
 }
-form{
+div{
     width: 300px;
     margin: auto;
 }
-form input{
+div input{
 width: 250px;
 height: 25px;
 margin: 25px;
