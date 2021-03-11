@@ -9,5 +9,6 @@ function input() {
         // document.body.append(li);
         li.appendChild(document.body.append(li));
         ul.appendChild(li);
+        ul.prepend(inputEl);
         document.getElementById('input').value = '';
 }

@@ -1,4 +1,4 @@
-let operandEL1,operandEL2;
+  let operandEL1,operandEL2;
 function getEL() {
   operandEL1 = document.getElementById('operand_1').value;
   operandEL2 = document.getElementById('operand_2').value;
