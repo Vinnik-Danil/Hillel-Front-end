@@ -1,40 +1,57 @@
-function sum(numb1) {
-    return function add(numb2) {
-        console.log(numb1+ numb2);
-        return numb1+numb2;
-    };
+function calculate(numb1) {
+    return{
+        add: function(numb2){
+          return numb1+numb2;
+        },
+        sub: function(numb2){
+            return numb1-numb2;
+        },
+        div: function(numb2){
+            return numb1/numb2;
+        },
+        mult: function(numb2){
+            return numb1*numb2;
+        }
+      }
 }
 
 
 
-function diff(numb1,numb2) {
-    return function() {
-        console.log(numb1-numb2);
-        return numb1-numb2;
-    };
-}
+// function diff(numb1,numb2) {
+//     return function() {
+//         console.log(numb1-numb2);
+//         return numb1-numb2;
+//     };
+// }
 
 
 
-function mult(numb1,numb2) {
-    return function() {
-        console.log(numb1*numb2);
-        return numb1*numb2;
-    };
-}
+// function mult(numb1,numb2) {
+//     return function() {
+//         console.log(numb1*numb2);
+//         return numb1*numb2;
+//     };
+// }
 
 
-function div(numb1,numb2) {
-    return function() {
-        console.log(numb1/numb2);
-        return numb1/numb2;
-    };
-}
+// function div(numb1,numb2) {
+//     return function() {
+//         console.log(numb1/numb2);
+//         return numb1/numb2;
+//     };
+// }
 
 
 
-let sum1 = sum(1,6);
-alert(sum1());
+let num1 = calculate(4);
+
+console.log(num1.add(5));
+
+num1.mult(7);
+console.log(num1.mult(5));
+
+
+// alert(sum1());
 
 // let diff1 = diff(1,6);
 // alert(diff1());
